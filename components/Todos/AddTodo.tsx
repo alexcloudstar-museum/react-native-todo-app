@@ -29,7 +29,7 @@ const AddTodo: FC<AddTodoProps> = ({ todos, setTodos }) => {
     });
   };
 
-  const onEndEditing = () => {
+  const onSubmit = (event: any) => {
     if (!todo.title) {
       Alert.alert('Error', 'Please enter a todo', [{ text: 'OK' }]);
       return;
@@ -38,6 +38,7 @@ const AddTodo: FC<AddTodoProps> = ({ todos, setTodos }) => {
     todos !== null ? storeData([...todos, todo]) : storeData([todo]);
 
     todo && setTodos([...todos, todo]);
+
     setTodo({
       id: '',
       title: '',
@@ -52,7 +53,7 @@ const AddTodo: FC<AddTodoProps> = ({ todos, setTodos }) => {
         style={styles.input}
         value={todo?.title}
         onChangeText={onChangeText}
-        onEndEditing={onEndEditing}
+        onSubmitEditing={onSubmit}
       />
     </View>
   );
