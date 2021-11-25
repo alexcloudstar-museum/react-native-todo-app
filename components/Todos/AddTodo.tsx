@@ -37,7 +37,7 @@ const AddTodo: FC<AddTodoProps> = ({ todos, setTodos }) => {
 
     todos !== null ? storeData([...todos, todo]) : storeData([todo]);
 
-    todo && setTodos([...todos, todo]);
+    todo && todos ? setTodos([...todos, todo]) : setTodos([todo]);
 
     setTodo({
       id: '',
