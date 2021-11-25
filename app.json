@@ -1,6 +1,7 @@
 {
   "expo": {
-    "name": "todo-app",
+    "name": "Todo App",
+    "description": "Hi there 👋🏻  this is my very first mobile application which i develop. It doesn't have any special functionalities, but we all start from somewhere. Cheers 🍻",
     "slug": "todo-app",
     "version": "1.0.0",
     "orientation": "portrait",
