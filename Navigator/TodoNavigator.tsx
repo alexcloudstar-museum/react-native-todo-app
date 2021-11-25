@@ -1,15 +1,15 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import MainScreen from '../Screens/MainScreen';
+import MainScreen, { screenOptions as screenOptionsMainScreen } from '../Screens/MainScreen';
+import TodoDetailsScreen, { screenOptions as screenOptionsTodoDetailsScreen } from '../Screens/TodoDetailsScreen';
 
 const Stack = createNativeStackNavigator();
-
-const MainStack = () => <Stack.Screen name='Home' component={MainScreen} />;
 
 const TodoNavigator = () => {
   return (
     <Stack.Navigator>
-      <MainStack />
+      <Stack.Screen name='Home' component={MainScreen} options={screenOptionsMainScreen} />
+      <Stack.Screen name='TodoDetail' component={TodoDetailsScreen} options={screenOptionsTodoDetailsScreen} />
     </Stack.Navigator>
   );
 };
